@@ -1,6 +1,6 @@
 const app = require("./app.js");
 const db = require("./config/db.js");
-const userModel = require("./user_model.js");
+const userModel = require("./model/user_model.js");
 
 const PORT = 4000;
 

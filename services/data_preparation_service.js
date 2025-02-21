@@ -1,4 +1,4 @@
-const { translateToEnglish } = require("./services/traslation_service.js");
+const { translateToEnglish } = require("./traslation_service.js");
 
 class DataPreparationService {
   normalizeData(value, mapping) {

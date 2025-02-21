@@ -1,4 +1,4 @@
-const UserModel = require("./model/user_model.js");
+const UserModel = require("../model/user_model.js");
 const jwt = require("jsonwebtoken");
 
 class UserService {

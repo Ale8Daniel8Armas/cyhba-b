@@ -1,7 +1,7 @@
-const calculateBMI = require("./utils/CalculateBMI.js");
-const calculateSTU = require("./utils/CalculateAlcoholComsumption.js");
-const userService = require("./services/user_service.js");
-const UserModel = require("./model/user_model.js");
+const calculateBMI = require("../utils/CalculateBMI.js");
+const calculateSTU = require("../utils/CalculateAlcoholComsumption.js");
+const userService = require("../services/user_service.js");
+const UserModel = require("../model/user_model.js");
 
 exports.register = async (req, res) => {
   try {

@@ -1,6 +1,6 @@
 const router = require("express").Router();
-const UserController = require("./controller/user_controller.js");
-const mlRoutes = require("./services/ml_services.js");
+const UserController = require("../controller/user_controller.js");
+const mlRoutes = require("../services/ml_services.js");
 
 //Ruta del modelo ML
 router.post("/predict", mlRoutes);

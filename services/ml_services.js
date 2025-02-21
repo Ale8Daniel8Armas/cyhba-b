@@ -1,9 +1,9 @@
 // ml_service.js
 const express = require("express");
 const router = express.Router();
-const User = require("./model/user_model");
+const User = require("../model/user_model.js");
 const axios = require("axios");
-const dataPreparationService = require("./services/data_preparation_service.js");
+const dataPreparationService = require("./data_preparation_service.js");
 
 const ML_SERVICE_URL = "http://192.168.1.5:5000/predict";
 

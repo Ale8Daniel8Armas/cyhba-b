@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("./config/db");
+const db = require("../config/db.js");
 const bcrypt = require("bcrypt");
 
 const { Schema } = mongoose;
