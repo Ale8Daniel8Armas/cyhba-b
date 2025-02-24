@@ -485,7 +485,7 @@ exports.updateUserSmoke = async (req, res) => {
 // Función para actualizar consumoAlcohol
 exports.updateSTU = async (req, res) => {
   try {
-    const { email, unidadesAlcohol, consumoPorDias, frecuenciaSemanal } =
+    let { email, unidadesAlcohol, consumoPorDias, frecuenciaSemanal } =
       req.body;
 
     // Validación de datos
@@ -526,9 +526,9 @@ exports.updateSTU = async (req, res) => {
     if (user.genero == "Masculino") {
       if (consumoInicial <= 14) {
         consumoAlcohol = "Bajo";
-      } else if (consumoInicial <= 21 && consumoInicial >= 15) {
+      } else if (consumoInicial <= 21 && consumoInicial > 14) {
         consumoAlcohol = "Moderado";
-      } else if (consumoInicial >= 22) {
+      } else if (consumoInicial > 21) {
         consumoAlcohol = "Alto";
       }
     }
@@ -536,9 +536,9 @@ exports.updateSTU = async (req, res) => {
     if (user.genero == "Femenino") {
       if (consumoInicial <= 7) {
         consumoAlcohol = "Bajo";
-      } else if (consumoInicial <= 14 && consumoInicial >= 8) {
+      } else if (consumoInicial <= 14 && consumoInicial > 7) {
         consumoAlcohol = "Moderado";
-      } else if (consumoInicial >= 15) {
+      } else if (consumoInicial > 14) {
         consumoAlcohol = "Alto";
       }
     }
@@ -546,9 +546,9 @@ exports.updateSTU = async (req, res) => {
     if (user.genero == "Otro") {
       if (consumoInicial <= 11) {
         consumoAlcohol = "Bajo";
-      } else if (consumoInicial <= 20 && consumoInicial >= 12) {
+      } else if (consumoInicial <= 20 && consumoInicial > 11) {
         consumoAlcohol = "Moderado";
-      } else if (consumoInicial >= 21) {
+      } else if (consumoInicial > 20) {
         consumoAlcohol = "Alto";
       }
     }
