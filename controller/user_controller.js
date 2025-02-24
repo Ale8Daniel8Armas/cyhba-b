@@ -509,6 +509,10 @@ exports.updateSTU = async (req, res) => {
         .json({ status: false, message: "Usuario no encontrado" });
     }
 
+    if (tipoBebida == "Agua (no tomo)" || tipoBebida == "Water") {
+      unidadesAlcohol = 1 / 3;
+    }
+
     // Calcular el STU
     const consumoInicial = calculateSTU(
       unidadesAlcohol,
