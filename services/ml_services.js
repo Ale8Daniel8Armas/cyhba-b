@@ -5,7 +5,7 @@ const User = require("../model/user_model.js");
 const axios = require("axios");
 const dataPreparationService = require("./data_preparation_service.js");
 
-const ML_SERVICE_URL = "https://2618-191-99-41-68.ngrok-free.app/predict";
+const ML_SERVICE_URL = " https://7904-191-99-41-68.ngrok-free.app/predict";
 
 router.post("/predict", async (req, res) => {
   try {
