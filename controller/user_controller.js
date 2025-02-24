@@ -509,7 +509,7 @@ exports.updateSTU = async (req, res) => {
         .json({ status: false, message: "Usuario no encontrado" });
     }
 
-    if (tipoBebida == "Agua (no tomo)" || tipoBebida == "Water") {
+    if (user.tipoBebida == "Agua (no tomo)" || user.tipoBebida == "Water") {
       unidadesAlcohol = 1 / 3;
     }
 
@@ -524,9 +524,7 @@ exports.updateSTU = async (req, res) => {
 
     //consumo para hombres
     if (user.genero == "Masculino") {
-      if (consumoInicial <= 7) {
-        consumoAlcohol = "Nada";
-      } else if (consumoInicial <= 14) {
+      if (consumoInicial <= 14) {
         consumoAlcohol = "Bajo";
       } else if (consumoInicial <= 21 && consumoInicial >= 15) {
         consumoAlcohol = "Moderado";
@@ -536,9 +534,7 @@ exports.updateSTU = async (req, res) => {
     }
 
     if (user.genero == "Femenino") {
-      if (consumoInicial <= 4) {
-        consumoAlcohol = "Nada";
-      } else if (consumoInicial <= 7) {
+      if (consumoInicial <= 7) {
         consumoAlcohol = "Bajo";
       } else if (consumoInicial <= 14 && consumoInicial >= 8) {
         consumoAlcohol = "Moderado";
@@ -548,9 +544,7 @@ exports.updateSTU = async (req, res) => {
     }
 
     if (user.genero == "Otro") {
-      if (consumoInicial <= 6) {
-        consumoAlcohol = "Nada";
-      } else if (consumoInicial <= 11) {
+      if (consumoInicial <= 11) {
         consumoAlcohol = "Bajo";
       } else if (consumoInicial <= 20 && consumoInicial >= 12) {
         consumoAlcohol = "Moderado";
